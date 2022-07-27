@@ -7,16 +7,15 @@ import { LoginService } from './service/login.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit {
+  test: any;
   constructor(private router: Router, public loginService: LoginService) {}
 
+  ngOnInit(): void {
+    this.test = this.loginService.get;
+  }
+
   navigateMenu() {
-    this.router.navigate([
-      {
-        outlets: {
-          mfePayment: 'menu',
-        },
-      },
-    ]);
+    this.router.navigate(['menu']);
   }
 }

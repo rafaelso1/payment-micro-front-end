@@ -12,6 +12,7 @@ import { MenuModule } from './pages/menu/menu.module';
 import { PayTicketsModule } from './pages/pay-tickets/pay-tickets.module';
 import { SecondWayTicketsModule } from './pages/second-way-tickets/second-way-tickets.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent],
@@ -28,12 +29,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ErrorModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {
-  constructor() {
-    const elementName = 'mfePayment';
-  }
+  constructor() {}
 }

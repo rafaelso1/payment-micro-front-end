@@ -4,20 +4,12 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent {
+  constructor(private route: Router) {}
 
-  constructor(private route: Router) { }
-
-  navigateLogin(){
-    this.route.navigate([
-      {
-        outlets:{
-          mfePayment:'login'
-        }
-      }
-    ])
+  navigateLogin() {
+    this.route.navigate(['login']);
   }
-
 }
