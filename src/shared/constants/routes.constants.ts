@@ -1,12 +1,13 @@
 import { Routes } from '@angular/router';
-import { AccountDebitComponent } from '../../app/pages/account-debit/account-debit.component';
-import { CreditCardComponent } from '../../app/pages/credit-card/credit-card.component';
 import { HomeComponent } from '../../app/pages/home/home.component';
-import { IssuanceTicketsComponent } from '../../app/pages/issuance-tickets/issuance-tickets.component';
 import { LoginComponent } from '../../app/pages/login/login.component';
 import { MenuComponent } from '../../app/pages/menu/menu.component';
-import { PayTicketsComponent } from '../../app/pages/pay-tickets/pay-tickets.component';
-import { SecondWayTicketsComponent } from '../../app/pages/second-way-tickets/second-way-tickets.component';
+import { AccountDebitComponent } from '../../app/pages/payments/components/account-debit/account-debit.component';
+import { CreditCardComponent } from '../../app/pages/payments/components/credit-card/credit-card.component';
+import { IssuanceTicketsComponent } from '../../app/pages/payments/components/issuance-tickets/issuance-tickets.component';
+import { PayTicketsComponent } from '../../app/pages/payments/components/pay-tickets/pay-tickets.component';
+import { SecondWayTicketsComponent } from '../../app/pages/payments/components/second-way-tickets/second-way-tickets.component';
+import { PaymentsComponent } from '../../app/pages/payments/payments.component';
 import { ErrorComponent } from '../components/error/error.component';
 
 export const routes: Routes = [
@@ -49,5 +50,9 @@ export const routes: Routes = [
   {
     path: 'error',
     component: ErrorComponent,
+  },
+  {
+    path: 'payments',
+    component: PaymentsComponent,
   },
 ];

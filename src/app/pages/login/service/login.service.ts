@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { catchError, first, map } from 'rxjs/operators';
+import { retry, catchError, first, map } from 'rxjs/operators';
 import { Observable, throwError } from 'rxjs';
 import { ILogin } from 'src/shared/model/login.model';
 
@@ -8,22 +8,18 @@ import { ILogin } from 'src/shared/model/login.model';
   providedIn: 'root',
 })
 export class LoginService {
-  private readonly API = `login-api`;
+  private readonly API = `http://localhost:3000/login-api`;
 
   constructor(private http: HttpClient) {}
 
-  get(): Observable<ILogin> {
+  get(): Observable<any> {
     return this.getMock();
   }
 
   getMock() {
-    return this.http.get<ILogin>(this.API).pipe(
-      first(),
-      catchError(this.handleError),
-      map((x: ILogin) => {
-        return x;
-      })
-    );
+    return this.http
+      .get<ILogin>(this.API)
+      .pipe(first(), retry(), catchError(this.handleError));
   }
 
   handleError(error: Error) {
