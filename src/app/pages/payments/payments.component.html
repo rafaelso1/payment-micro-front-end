@@ -1,1 +1,5 @@
-<p>payments works!</p>
+<div *ngFor="let options of menu">
+    <a (click)="navigateTo(options.component)">
+        <button class="btn btn-primary">{{ options.name }}</button>
+    </a>
+</div>
