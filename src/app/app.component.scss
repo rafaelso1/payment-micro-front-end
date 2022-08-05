@@ -1,3 +1,15 @@
-.container-root{
-    display: inline-grid;
+.container-root {
+  display: inline-grid;
+}
+
+button.btn {
+  background-color: #ec7000;
+  color: white;
+  border: none;
+}
+
+button.btn:hover {
+  background-color: #dd6100;
+  color: white;
+  border: none;
 }

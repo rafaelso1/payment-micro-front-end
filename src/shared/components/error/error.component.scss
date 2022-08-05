@@ -1,0 +1,22 @@
+.box-info-erro {
+  border: none;
+  color: #fff;
+  background: #464646;
+  padding: 10px 30px 10px 40px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  span.info-erro {
+    background: url(../../../assets/sprite-icon-peq.png) -72px 0 no-repeat transparent;
+    display: block;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    margin-left: -30px;
+    margin-top: -5px;
+  }
+}
+
+p {
+  margin-bottom: 0px;
+}

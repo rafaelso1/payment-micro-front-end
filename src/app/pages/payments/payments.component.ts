@@ -8,11 +8,11 @@ import { IMenuOptions } from '../../../shared/model/menu-options.model';
   styleUrls: ['./payments.component.scss'],
 })
 export class PaymentsComponent implements OnInit {
-  menu?: IMenuOptions[];
+  menus?: IMenuOptions[];
   constructor(private router: Router) {}
 
   ngOnInit(): void {
-    this.menu = [
+    this.menus = [
       { name: 'Emissão de Boletos', component: 'issuance-tickets' },
       { name: 'Pagamento de Boletos', component: 'pay-tickets' },
       { name: 'Débito em Conta', component: 'account-debit' },

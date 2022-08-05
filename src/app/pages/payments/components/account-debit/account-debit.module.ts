@@ -1,11 +1,12 @@
-import { NgModule } from "@angular/core";
-import { AccountDebitComponent } from "./account-debit.component";
+import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { AccountDebitComponent } from './account-debit.component';
 
 @NgModule({
-    imports: [],
-    exports: [],
-    declarations: [AccountDebitComponent],
-    providers: []
+  imports: [CommonModule, BrowserModule],
+  exports: [AccountDebitComponent],
+  declarations: [AccountDebitComponent],
+  providers: [],
 })
-
-export class AccountDebitModule{}
+export class AccountDebitModule {}

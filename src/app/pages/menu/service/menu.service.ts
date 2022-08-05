@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, first, retry, catchError, throwError } from 'rxjs';
+import { Observable, catchError, throwError, ObservableInput } from 'rxjs';
 import { IMenu } from '../../../../shared/model/menu.model';
 
 @Injectable({
@@ -16,12 +16,10 @@ export class MenuService {
   }
 
   getMock() {
-    return this.http
-      .get<IMenu>(this.API)
-      .pipe(first(), retry(), catchError(this.handleError));
+    return this.http.get<IMenu>(this.API).pipe(catchError(this.handleError));
   }
 
-  handleError(error: Error) {
+  handleError(error: Error): ObservableInput<any> {
     return throwError(error);
   }
 }

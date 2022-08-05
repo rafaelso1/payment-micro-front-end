@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { retry, catchError, first, map } from 'rxjs/operators';
-import { Observable, throwError } from 'rxjs';
+import { catchError } from 'rxjs/operators';
+import { Observable, ObservableInput, throwError } from 'rxjs';
 import { ILogin } from 'src/shared/model/login.model';
 
 @Injectable({
@@ -12,17 +12,15 @@ export class LoginService {
 
   constructor(private http: HttpClient) {}
 
-  get(): Observable<any> {
+  get(): Observable<ILogin> {
     return this.getMock();
   }
 
   getMock() {
-    return this.http
-      .get<ILogin>(this.API)
-      .pipe(first(), retry(), catchError(this.handleError));
+    return this.http.get<ILogin>(this.API).pipe(catchError(this.handleError));
   }
 
-  handleError(error: Error) {
+  handleError(error: Error): ObservableInput<any> {
     return throwError(error);
   }
 }

@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { FrontPageComponent } from 'src/app/pages/front-page/front-page.component';
 import { HomeComponent } from '../../app/pages/home/home.component';
 import { LoginComponent } from '../../app/pages/login/login.component';
 import { MenuComponent } from '../../app/pages/menu/menu.component';
@@ -7,25 +8,16 @@ import { CreditCardComponent } from '../../app/pages/payments/components/credit-
 import { IssuanceTicketsComponent } from '../../app/pages/payments/components/issuance-tickets/issuance-tickets.component';
 import { PayTicketsComponent } from '../../app/pages/payments/components/pay-tickets/pay-tickets.component';
 import { SecondWayTicketsComponent } from '../../app/pages/payments/components/second-way-tickets/second-way-tickets.component';
-import { PaymentsComponent } from '../../app/pages/payments/payments.component';
 import { ErrorComponent } from '../components/error/error.component';
 
 export const routes: Routes = [
   {
     path: '',
-    component: HomeComponent,
+    component: FrontPageComponent,
   },
   {
     path: 'home',
     component: HomeComponent,
-  },
-  {
-    path: 'login',
-    component: LoginComponent,
-  },
-  {
-    path: 'menu',
-    component: MenuComponent,
   },
   {
     path: 'credit-card',
@@ -50,9 +42,5 @@ export const routes: Routes = [
   {
     path: 'error',
     component: ErrorComponent,
-  },
-  {
-    path: 'payments',
-    component: PaymentsComponent,
   },
 ];

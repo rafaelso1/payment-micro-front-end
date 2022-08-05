@@ -7,11 +7,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  constructor(private router: Router) {}
+  constructor(private _router: Router) {}
 
   ngOnInit(): void {}
 
   home() {
-    this.router.navigate(['home']);
+    this._router.navigate(['home']);
+  }
+
+  showForm() {
+    return this._router.url === '/' || this._router.url === '/error';
   }
 }

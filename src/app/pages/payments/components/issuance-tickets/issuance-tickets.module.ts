@@ -1,11 +1,12 @@
-import { NgModule } from "@angular/core";
-import { IssuanceTicketsComponent } from "./issuance-tickets.component";
+import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { IssuanceTicketsComponent } from './issuance-tickets.component';
 
 @NgModule({
-    imports: [],
-    exports: [],
-    declarations: [IssuanceTicketsComponent],
-    providers: []
+  imports: [CommonModule, BrowserModule],
+  exports: [IssuanceTicketsComponent],
+  declarations: [IssuanceTicketsComponent],
+  providers: [],
 })
-
-export class IssuanceTicketsModule{}
+export class IssuanceTicketsModule {}

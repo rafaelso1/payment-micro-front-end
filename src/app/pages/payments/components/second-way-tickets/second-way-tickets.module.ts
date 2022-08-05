@@ -1,11 +1,12 @@
-import { NgModule } from "@angular/core";
-import { SecondWayTicketsComponent } from "./second-way-tickets.component";
+import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { SecondWayTicketsComponent } from './second-way-tickets.component';
 
 @NgModule({
-    imports: [],
-    exports: [],
-    declarations: [SecondWayTicketsComponent],
-    providers: []
+  imports: [CommonModule, BrowserModule],
+  exports: [SecondWayTicketsComponent],
+  declarations: [SecondWayTicketsComponent],
+  providers: [],
 })
-
-export class SecondWayTicketsModule{}
+export class SecondWayTicketsModule {}

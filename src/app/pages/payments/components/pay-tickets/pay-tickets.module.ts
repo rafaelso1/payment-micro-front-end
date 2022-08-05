@@ -1,11 +1,12 @@
-import { NgModule } from "@angular/core";
-import { PayTicketsComponent } from "./pay-tickets.component";
+import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { PayTicketsComponent } from './pay-tickets.component';
 
 @NgModule({
-    imports: [],
-    exports: [],
-    declarations: [PayTicketsComponent],
-    providers: []
+  imports: [CommonModule, BrowserModule],
+  exports: [PayTicketsComponent],
+  declarations: [PayTicketsComponent],
+  providers: [],
 })
-
-export class PayTicketsModule{}
+export class PayTicketsModule {}

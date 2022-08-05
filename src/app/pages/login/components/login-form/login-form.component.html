@@ -1,0 +1,10 @@
+<form [formGroup]="formBank" (ngSubmit)="navigateMenu()" class="d-flex">
+    <div class="form-group">
+        <input type="text" mask="0999" class="form-control" id="agency" formControlName="agency" placeholder="Agência">
+    </div>
+    <div class="form-group">
+        <input type="text" mask="00999-9" class="form-control" id="account" formControlName="account"
+            placeholder="Conta">
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="navigateMenu()">Entrar</button>
+</form>

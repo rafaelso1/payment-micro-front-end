@@ -1,5 +1,5 @@
-<div *ngFor="let options of menu">
-    <a (click)="navigateTo(options.component)">
-        <button class="btn btn-primary">{{ options.name }}</button>
-    </a>
-</div>
+<button mat-button [matMenuTriggerFor]="menu" class="btn">Pagamentos</button>
+<mat-menu #menu="matMenu">
+    <button mat-menu-item *ngFor="let options of menus" (click)="navigateTo(options.component)">{{ options.name
+        }}</button>
+</mat-menu>

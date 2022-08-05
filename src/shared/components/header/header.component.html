@@ -1,7 +1,17 @@
 <header class="fixed-top col-md-12 col-sm-10">
-    <div class="header-content">
-        <a (click)="home()" routerLinkActive="router-link-active">
-            <img src="../../assets/favicon.ico" alt="Ícone do Angular">
-        </a>
+    <div class="header-content d-flex col-md-12">
+        <div class="col-md-1">
+            <a (click)="home()" routerLinkActive="router-link-active">
+                <img src="../../assets/favicon.ico" alt="Ícone do Angular">
+            </a>
+        </div>
+        <div class="col-md-7">
+            <app-menu-home *ngIf="!showForm()"></app-menu-home>
+        </div>
+        <div class="col-md-4">
+            <app-login *ngIf="showForm()"></app-login>
+            <app-welcome *ngIf="!showForm()"></app-welcome>
+        </div>
     </div>
+
 </header>

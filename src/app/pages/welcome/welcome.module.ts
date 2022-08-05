@@ -1,12 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { HomeComponent } from 'src/app/pages/home/home.component';
 import { ErrorModule } from 'src/shared/components/error/error.module';
+import { WelcomeComponent } from './welcome.component';
 
 @NgModule({
   imports: [ErrorModule, CommonModule],
-  exports: [HomeComponent],
-  declarations: [HomeComponent],
+  exports: [WelcomeComponent],
+  declarations: [WelcomeComponent],
   providers: [],
 })
-export class HomeModule {}
+export class WelcomeModule {}

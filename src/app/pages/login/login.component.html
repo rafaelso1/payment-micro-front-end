@@ -1,11 +1,1 @@
-<form [formGroup]="formBank" (ngSubmit)="navigateMenu()">
-  <div class="form-group">
-    <label for="agency">Agencia</label>
-    <input type="text" class="form-control" id="agency" formControlName="agency" placeholder="XXXX">
-  </div>
-  <div class="form-group">
-    <label for="account">Conta</label>
-    <input type="text" class="form-control" id="account" formControlName="account" placeholder="Account">
-  </div>
-  <button type="submit" class="btn btn-primary">Entrar</button>
-</form>
+<app-login-form [isError]="isError" [message]="message"></app-login-form>

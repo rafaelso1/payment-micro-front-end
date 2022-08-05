@@ -1,11 +1,12 @@
-import { NgModule } from "@angular/core";
-import { CreditCardComponent } from "./credit-card.component";
+import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { CreditCardComponent } from './credit-card.component';
 
 @NgModule({
-    imports: [],
-    exports: [],
-    declarations: [CreditCardComponent],
-    providers: []
+  imports: [CommonModule, BrowserModule],
+  exports: [CreditCardComponent],
+  declarations: [CreditCardComponent],
+  providers: [],
 })
-
-export class CreditCardModule{}
+export class CreditCardModule {}
